@@ -78,7 +78,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
+console.log(reviews[5]['feedback']);
 
 
 
@@ -88,14 +88,20 @@ Using the reviews array above do the following: (no function needed)
   2. log the whole array to the console, make sure the new review is inside of it   
 */
 
+reviews.push({
+  name: 'Rich',
+  rating: 9,
+  feedback: 'smells like mold'
 
-
+})
+console.log(reviews)
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-
+reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
+console.log(reviews)
 
 
 
@@ -132,11 +138,8 @@ Use the getLastReview function below to do the following:
 
 
 function getLastReview(array) {
-  const {name,rating,feedback} = array[array.length-1]
-  return array[array.length-1]
-  
-
-  
+  const {name,rating,feedback} = array[array.length-1];
+  return `${name} gave the restaurant a ${rating} star review, and their feedback was: ${feedback}`;
 } 
 
 
