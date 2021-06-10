@@ -160,10 +160,18 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(array,rating) {
+   let newArr = []
+   const {rating} = array[i][rating]
+    for( let i=0; i > array.length; i++){
+      if (array[i][rating].includes(rating)){
+       newArr.push(array[i]) 
+      }
+      
+    }
+    return newArr
   }
-
+console.log(getReviewByRating(reviews, 4))
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
